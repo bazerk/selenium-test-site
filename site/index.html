@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Awesome Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <div class="container">
+        <h1>Awesome Calculators</h1>
+        <form id="calc-creator">
+          <div class="form-group">
+            <label for="calc-name">Calculator name</label>
+            <input class="form-control" id="calc-name" placeholder="Name">
+          </div>
+          <button type="button" class="btn btn-default">Add calc</button>
+          <div style="margin: 10px;">
+            You currently have <span class="num-calcs">0</span> calculators.
+          </div>
+        </form>
+        <div id="calculators"></div>
+      </div>
+
+      <script id="calc-template" type="text/template">
+        <div class="calculator">
+          <h2><%- name %></h2>
+          <form class="form-inline">
+            <div class="form-group">
+              <input type="text" class="form-control input-one">
+            </div>
+            <div class="form-group">
+              <select class="form-control operator">
+                <option value="add">add</option>
+                <option value="subtract">subtract</option>
+                <option value="multiply">multiply</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control input-two">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control result">
+            </div>
+            <button class="delete-calc" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+          </form>
+        </div>
+      </script>
+      <script src="js/vendor/jquery-1.11.2.js"></script>
+      <script src="js/vendor/underscore.js"></script>
+      <script src="js/vendor/backbone.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+</html>
