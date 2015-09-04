@@ -1,7 +1,6 @@
 (function(global) {
 
     var calcTemplate = _.template($('#calc-template').html());
-
     
     var CalcCreator = Backbone.View.extend({
         events: {
@@ -64,11 +63,9 @@
         }
     });
 
-
     var buttonCreatorView = new CalcCreator({
         el: '#calc-creator',
         calculatorContainer: '#calculators'
     });
-
 
 }(window));
