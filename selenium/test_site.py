@@ -1,7 +1,12 @@
+import os
 from selenium import webdriver
 
+
+script_dir = os.path.dirname(os.path.realpath(__file__))
+index_html = os.path.join(script_dir, '../site/index.html')
+
 driver = webdriver.Firefox()
-driver.get("file:///home/andrew/dev/selenium-test-site/site/index.html")
+driver.get("file://" + index_html)
 assert "Awesome Calculator" in driver.title
 
 
